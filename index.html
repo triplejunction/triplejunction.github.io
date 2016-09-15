@@ -25,11 +25,20 @@
                 </h1>
             </div>
         </div>
+        <div class="row m-top-2">
+            <div class="col-md-12 m-top-2">
+                <h1>
+                    <a href="#below-hero" class="slow">
+                        <i class="white fa fa-caret-down c-text" aria-hidden="true"></i>
+                    </a>
+                </h1>
+            </div>
+        </div>
     </div>
 </div>
 
 
-<div class="container m-top-bottom">
+<div class="container m-top-bottom" id="below-hero">
     <div class="row">
         <div class="col-xs-2"></div>
         <div class="col-xs-8">
@@ -92,7 +101,14 @@
 </div>
 
     <!-- jQuery first, then Bootstrap JS. -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(".slow").click(function() {
+            $('html,body').animate({
+                        scrollTop: $("#below-hero").offset().top},
+                    'slow');
+        });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
